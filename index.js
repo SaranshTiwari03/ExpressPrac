@@ -2,6 +2,8 @@ var express= require("express");
 var app= express();
 const mongoose= require("mongoose");
 
+
+//this command is to tell which view engine we are using for our project 
 app.set("view engine", "ejs");
 
 const myStudent= require("./Models/StudentModel")
@@ -23,6 +25,14 @@ app.get("/Services",(req,res)=>{
 
 app.get("/About",(req,res)=>{
     res.render("About")
+})
+
+app.get("/Contact",(req,res)=>{
+    res.render("Contact")
+})
+
+app.get("/Blog",(req,res)=>{
+    res.render("Blog")
 })
 
 
